@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Zuri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -17,10 +18,10 @@
             <div class="nav-list">
                 <div class="hamburger"><div class="bar"></div></div>
                 <ul class="nav-links">
-                    <li><a href="#hero" data-after="Home">Home</a></li>
+                    <li><a href="#hero" class="active-link" data-after="Home">Home</a></li>
                     <li><a href="#curriculum" data-after="About">Curriculum</a></li>
-                    <li><a href="#footer" data-after="Contact-us">contact us</a></li>
-                </ul>   
+                    <li><a href="#footer" data-after="Contact us">contact us</a></li>
+                </ul>
                 <a href="#" type="button" class="cta">Enroll now</a>
             </div>
         </div>
@@ -37,7 +38,7 @@
                     <li>Collaborative Learning</li>
                 </ol>
             </div>
-            <div class="students-image"><img src="./Image from iOS.png" alt="carricature of tech enthusiasts"></div>
+            <div class="students-image"><img src="./images/Image from iOS.png" alt="carricature of tech enthusiasts"></div>
             <div class="hero-links">
                 <a href="#">Facebook</a>
                 <a href="#">Twitter</a>
@@ -47,53 +48,51 @@
     </section>
 
     <section id="curriculum">
-        <div class="curriculum-section">
+        <div class="curriculum-section container">
             <div class="curriculum-section-content">
                 <h1>Curriculum</h1>
             </div>
             
-
             <div class="cards">
-                <div>
-                    <div class="card">
-                        <div class="image"><img src="./images.png" alt="dotted circle"></div>
-                        <h4>Mobile <br> Development</h4>
-                    </div>
-                    <div class="card">
-                        <div class="image"><img src="./images.png" alt="dotted circle"></div>
-                        <h4>Front End <br>Development</h4>
-                    </div>
-                    <div class="card">
-                        <div class="image"><img src="./images.png" alt="dotted circle"></div>
-                        <h4>Back End <br> Development</h4>
-                    </div>
-                    <div class="card">
-                        <div class="image"><img src="./images.png" alt="dotted circle"></div>
-                        <h4>Frame <br> Works</h4>
-                    </div>
-                    <div class="card">
-                        <div class="image"><img src="./images.png" alt="dotted circle"></div>
-                        <h4>UI/UX <br> Design</h4>
-                    </div>
-                    <div class="card">
-                        <div class="image"><img src="./images.png" alt="dotted circle"></div>
-                        <h4>Cloud <br> Engineering</h4>
-                    </div>
+                <div class="card">
+                    <div class="image"><img src="./images/images.png" alt="dotted circle"></div>
+                    <h4>Mobile <br> Development</h4>
+                </div>
+                <div class="card">
+                    <div class="image"><img src="./images/images.png" alt="dotted circle"></div>
+                    <h4>Front End <br>Development</h4>
+                </div>
+                <div class="card">
+                    <div class="image"><img src="./images/images.png" alt="dotted circle"></div>
+                    <h4>Back End <br> Development</h4>
+                </div>
+                <div class="card">
+                    <div class="image"><img src="./images/images.png" alt="dotted circle"></div>
+                    <h4>Frame <br> Works</h4>
+                </div>
+                <div class="card">
+                    <div class="image"><img src="./images/images.png" alt="dotted circle"></div>
+                    <h4>UI/UX <br> Design</h4>
+                </div>
+                <div class="card">
+                    <div class="image"><img src="./images/images.png" alt="dotted circle"></div>
+                    <h4>Cloud <br> Engineering</h4>
                 </div>
             </div>
+                
         </div>
         
 
     </section>
 
     <section id="enroll-forms">
-        <div class="enroll-forms-content">
-            <h1>Enroll Now</h1>
-            <p><span>Enter your details correctly to join the waitlist</span></p>
-        </div>
-
-        <div class="forms">
-            <div>
+        <div class="enroll-top container">
+            <div class="enroll-forms-content">
+                <h1>Enroll Now</h1>
+                <p><span>Enter your details correctly to join the waitlist</span></p>
+            </div>
+    
+            <div class="forms">
                 <div class="form">
                     <input type="text" placeholder="Enter first name">
                 </div>
@@ -165,10 +164,14 @@
                         </select>
                     </form>
                 </div>
-                <a href="#" type="button" class="cta">>>></a>
-                
+               <div class="form">
+                   <div>
+                       <a href="#" type="button" class="cta"><i class="fas fa-chevron-right"></i></a>
+                   </div>
+               </div>
             </div>
         </div>
+        
     </section>
 
     <section id="footer">
@@ -188,9 +191,9 @@
                 <a href="#">Blog</a>
             </div>
             <div class="footer-socials">
-                <img src="./icons8-instagram-48 (1).png" alt="our instagram page">
-                <img src="./icons8-twitter-48.png" alt="our twitter page">
-                <img src="./icons8-facebook-100.png" alt="our facebook page">
+                <img src="./images/icons8-instagram-48 (1).png" alt="our instagram page">
+                <img src="./images/icons8-twitter-48.png" alt="our twitter page">
+                <img src="./images/icons8-facebook-100.png" alt="our facebook page">
             </div>
 
         </div>

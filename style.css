@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Langar&family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface');
 
 * {
@@ -9,7 +9,7 @@
 
 html {
     font-size: 10px;
-    font-family: 'montserrat', sans-serif;
+    font-family: 'poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -21,6 +21,7 @@ a {
     min-height: 100vh;
     width: 100%;
     display: flex;
+    padding: 0 2rem;
     align-items: center;
     justify-content: center;
 }
@@ -41,7 +42,6 @@ p {
     background-color: crimson;
     border: 1px solid crimson;
     border-radius: 10%;
-    margin-left: 50px;
     margin-bottom: 10px;
     font-size: 0.98rem;
     letter-spacing: .1rem;
@@ -57,11 +57,14 @@ p {
 .brand h1 {
     font-size: 2rem;
     text-transform: uppercase;
-    margin-left: -70px;
     color: black;
 }
 
 span {
+    color: crimson;
+}
+
+a:hover{
     color: crimson;
 }
 
@@ -79,19 +82,25 @@ span {
 
 #Header .header {
     min-height: 8vh;
+    justify-content: space-between;
 }
 
 #Header .nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 46%;
-    height: 100%;
     max-width: 1300px;
     padding: 0 10px;
 }
 
-#Header .nav-list ul{
+#Header .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Header .nav-list ul {
     list-style: none;
     position: absolute;
     background-color: pink;
@@ -108,21 +117,21 @@ span {
     transition: .5s ease left;
 }
 
-#Header .nav-list ul.active{
+#Header .nav-list ul.active {
     left: 0;
 }
 
-#Header .nav-list ul a{
+#Header .nav-list ul a {
     font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: .2rem;
     text-decoration: none;
-    color: crimson;
+    color: gray;
     padding: 20px;
     display: block;
 }
 
-#Header .nav-list ul a::after{
+#Header .nav-list ul a::after {
     content: attr(data-after);
     position: absolute;
     top: 50%;
@@ -135,12 +144,24 @@ span {
     transition: .3s ease letter-spacing;
 }
 
-#Header .nav-list ul li:hover a::after{
+#Header .nav-list ul li:hover a::after {
     transform: translate(-50%, -50%) scale(1);
     letter-spacing: initial;
 }
 
-#Header .hamburger{
+#Header .active-link {
+    color: crimson;
+}
+
+#Header .nav-list ul a:hover {
+    color: crimson;
+}
+
+#Header .nav-list ul a:active {
+    color: crimson;
+}
+
+#Header .hamburger {
     height: 60px;
     width: 60px;
     display: inline-block;
@@ -153,10 +174,9 @@ span {
     z-index: 100;
     cursor: pointer;
     transform: scale(.7);
-    margin: 20px 60px;
 }
 
-#Header .hamburger .bar{
+#Header .hamburger .bar {
     height: 2px;
     width: 30px;
     position: relative;
@@ -165,7 +185,7 @@ span {
 }
 
 #Header .hamburger .bar::after,
-#Header .hamburger .bar::before{
+#Header .hamburger .bar::before {
     content: '';
     position: absolute;
     height: 100%;
@@ -176,82 +196,111 @@ span {
     transition-property: top, bottom;
 }
 
-#Header .hamburger .bar::before{
+#Header .hamburger .bar::before {
     bottom: 8px;
 }
-#Header .hamburger .bar::after{
+
+#Header .hamburger .bar::after {
     top: 8px;
 }
 
-#Header .hamburger.active .bar::before{
+#Header .hamburger.active .bar::before {
     bottom: 0;
 }
-#Header .hamburger.active .bar::after{
+
+#Header .hamburger.active .bar::after {
     top: 0;
 }
 
-#hero{
-    margin-top: 100px;
-    padding-top: 150px;
-    background-color: rgb(243, 187, 196);
-    padding: 2rem;
+#Header .header {
+    justify-content: space-between;
 }
 
-#hero h1{
+#hero {
+    margin-top: 106px;
+    padding-top: 200px;
+    background-color: rgb(243, 187, 196);
+    padding: 0 2rem;
+}
+
+#hero h1 {
     font-size: 30px;
     margin-bottom: 10px;
     padding-bottom: 10px;
 }
 
-#hero img{
+#hero img {
     width: 100%;
     height: auto;
 }
 
-#hero .hero-links a{
+#hero .hero-links a {
     writing-mode: vertical-lr;
     text-orientation: sideways;
     text-decoration: none;
+    display: flex;
     color: black;
     padding: 15px;
 }
 
-.curriculum-section-content h1{
+#hero .hero-links a:hover{
+        color: crimson;
+}
+
+#curriculum .curriculum-section {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.curriculum-section-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.curriculum-section-content h1 {
     font-size: 40px;
     text-align: center;
     padding: 30px;
 }
-.card{
+
+.card {
     background: #fff;
     padding: 30px 20px;
-    width: auto;
+    width: 400px;
     height: auto;
     margin: 10px;
     border-radius: 2px;
     display: flex;
+    flex-basis: 30%;
     max-width: 600px;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
 }
 
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 3rem;
-}
 
-.card .image{
+
+.card .image {
     width: 10px;
     height: auto;
 }
 
-.card h4{
+.card h4 {
     font-size: 20px;
     padding: 40px 30px 15px 150px;
     text-align: left;
 }
 
-#hero ol{
+#curriculum .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#hero ol {
     list-style: none;
     counter-reset: my-awesome-counter;
     display: flex;
@@ -261,7 +310,7 @@ span {
 }
 
 
-#hero ol li{
+#hero ol li {
     counter-increment: my-awesome-counter;
     display: flex;
     width: 50%;
@@ -269,8 +318,8 @@ span {
     margin: 0.5rem;
 }
 
-#hero ol li::before{
-    content: "0" counter(my-awesome-counter);
+#hero ol li::before {
+    content: "0"counter(my-awesome-counter);
     font-weight: bold;
     font-size: 3rem;
     font-family: 'Abril Fatface', serif;
@@ -279,33 +328,77 @@ span {
     text-decoration-color: crimson;
 }
 
-#enroll-forms{
+#enroll-forms .enroll-top {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#enroll-forms {
     background-color: rgb(243, 187, 196);
     padding-top: 20px;
     margin-top: 50px;
 }
 
-.enroll-forms-content h1{
+#enroll-forms .forms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#enroll-forms .forms .cta {
+    padding: 1rem 4rem;
+    margin-right: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 1.6rem
+}
+
+#enroll-forms .form {
+    padding: 3px -10px;
+    width: 500px;
+    height: auto;
+    margin: 8px 40px 8px 29px;
+    border-radius: 2px;
+    display: flex;
+    flex-basis: 40%;
+    max-width: 600px;
+
+
+}
+
+#enroll-forms .enroll-forms-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.enroll-forms-content h1 {
     font-size: 40px;
     text-align: center;
     padding: 30px 30px 0px;
 }
 
-.enroll-forms-content p{
+.enroll-forms-content p {
     font-weight: 600;
     text-align: center;
     padding-bottom: 60px;
+    letter-spacing: 3px;
+
 }
 
-input{
+input {
     width: 400px;
     padding: 10px 10px;
     border: none;
     border-radius: 5px;
-    margin:  10px;
+    margin: 10px;
 }
 
-select{
+select {
     width: 400px;
     padding: 10px 10px;
     border: none;
@@ -314,36 +407,41 @@ select{
 }
 
 
-.footer-logo{
+.footer-logo {
     text-align: center;
     font-size: 20px;
     padding: 30px;
 }
 
-.footer-Q-links{
+.footer-Q-links {
     text-align: center;
     padding: 15px;
 }
-.footer-Q-links h4{
+
+.footer-Q-links h4 {
     margin-bottom: 5px;
 }
-.footer-Q-links a{
+
+.footer-Q-links a {
     text-decoration: none;
     color: black;
 }
 
-.footer-C-links{
+.footer-C-links {
     text-align: center;
     padding: 15px;
 }
-.footer-C-links h4{
+
+.footer-C-links h4 {
     margin-bottom: 5px;
 }
-.footer-C-links a{
+
+.footer-C-links a {
     text-decoration: none;
     color: black;
 }
-.footer-socials{
+
+.footer-socials {
     text-align: center;
     padding: 15px;
     size: 100%;
@@ -352,29 +450,102 @@ select{
 
 
 
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 991px) {
     #Header .hamburger {
         display: none;
     }
-    
+
+    #Header .nav-list {
+        justify-content: space-between;
+        width: 70%;
+        flex-direction: row;
+    }
+
     #Header .nav-list ul {
         position: initial;
         display: block;
         height: auto;
-        width: fit-content;
+        width: auto;
         background-color: transparent;
     }
-    
+
+
     #Header .nav-list ul li {
         display: inline-block;
     }
-    
+
     #Header .nav-list ul li a {
         font-size: 1.8rem;
     }
-    
+
     #Header .nav-list ul a:after {
         display: none;
     }
-    
+
+    .cta {
+        padding: 1rem 4rem;
+        margin-right: 4rem;
+        text-align: center;
+        font-size: 1.5rem;
+        border-radius: 1.6rem;
+    }
+    #hero {
+        margin-top: 67px;
+    }
+
+    #hero .hero-links{
+        display: unset;
+    }
+
+    #enroll-forms input,
+    #enroll-forms select {
+        color: gray;
+    }
+
+    #footer {
+        padding: 2rem;
+        margin-top: 4rem;
+    }
+
+    #footer .footer-logo {
+        padding: 0;
+    }
+
+    #footer .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #footer .footer-Q-links,
+    #footer .footer-C-links,
+    #footer .footer-socials {
+        padding: 0;
+        font-size: 1.5rem;
+        text-align: start;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    #footer .footer-socials {
+        flex-direction: row;
+    }
+
+    #footer .footer-socials img {
+        margin-left: 10px;
+    }
+
+    #footer .footer-Q-links a,
+    #footer .footer-C-links a {
+        display: inline-block;
+        color: gray;
+        margin-bottom: 1.5rem;
+    }
+
+    #footer .footer-Q-links h4,
+    #footer .footer-C-links h4 {
+        margin-bottom: 1.5rem;
+    }
+
 }
