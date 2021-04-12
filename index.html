@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Zuri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-    <section id="Header">
+    <header id="Header">
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand"><h1>Zuri<span>&#8226;</span>Training</h1></div>
@@ -17,14 +18,14 @@
             <div class="nav-list">
                 <div class="hamburger"><div class="bar"></div></div>
                 <ul class="nav-links">
-                    <li><a href="#hero" data-after="Home">Home</a></li>
+                    <li><a href="#hero" class="active-link" data-after="Home">Home</a></li>
                     <li><a href="#curriculum" data-after="About">Curriculum</a></li>
                     <li><a href="#footer" data-after="Contact-us">contact us</a></li>
-                </ul>   
+                </ul>
                 <a href="#" type="button" class="cta">Enroll now</a>
             </div>
         </div>
-    </section>
+    </header>
 
     <section id="hero">
         <div class="hero container">
@@ -51,10 +52,8 @@
             <div class="curriculum-section-content">
                 <h1>Curriculum</h1>
             </div>
-            
-
             <div class="cards">
-                <div>
+                <div class="card-container" >
                     <div class="card">
                         <div class="image"><img src="./images.png" alt="dotted circle"></div>
                         <h4>Mobile <br> Development</h4>
@@ -93,7 +92,7 @@
         </div>
 
         <div class="forms">
-            <div>
+            <form class="form-container">
                 <div class="form">
                     <input type="text" placeholder="Enter first name">
                 </div>
@@ -104,11 +103,11 @@
                     <input type="text" placeholder="Say something about yourself in one line">
                 </div>
                 <div class="form">
-                    <form>
+                    <div>
                         <select name="track" id="track">
                             <option value="" disabled selected> Select your Track</option>
                         </select>
-                    </form>
+                    </div>
                 </div>
                 <div class="form">
                     <input type="text" placeholder="Enter phone number">
@@ -117,57 +116,60 @@
                     <input type="text" placeholder="Enter email address">
                 </div>
                 <div class="form">
-                    <form>
+                    <div>
                         <select name="country" id="country">
                             <option value="" disabled selected> Select your Country</option>
                         </select>
-                    </form>
+                    </div>
                 </div>
                 <div class="form">
-                    <form>
+                    <div>
                         <select name="employment status" id="emp-sta">
                             <option value="" disabled selected> Select your Employment Status</option>
                         </select>
-                    </form>
+                    </div>
                 </div>
                 <div class="form">
-                    <form>
+                    <div>
                         <select name="gender" id="gender">
                             <option value="" disabled selected> Select your Gender</option>
                         </select>
-                    </form>
+                    </div>
                 </div>
                 <div class="form">
-                    <form>
+                    <div>
                         <select name="age" id="ar">
                             <option value="" disabled selected> Select your Age Range</option>
                         </select>
-                    </form>
+                    </div>
                 </div>
                 <div class="form">
-                    <form>
+                    <div>
                         <select name="Experience" id="Exp">
                             <option value="" disabled selected> Select Experience level</option>
                         </select>
-                    </form>
+                    </div>
                 </div>
                 <div class="form">
-                    <form>
+                    <div>
                         <select name="Education" id="edu">
                             <option value="" disabled selected> Select Educational Level</option>
                         </select>
-                    </form>
+                    </div>
                 </div>
                 <div class="form">
-                    <form>
+                    <div>
                         <select name="whoTellU" id="how-na">
                             <option value="" disabled selected> How did you hear about us</option>
                         </select>
-                    </form>
+                    </div>
                 </div>
-                <a href="#" type="button" class="cta">>>></a>
-                
-            </div>
+                <div class="form">
+                    <div>
+                        <a href="#" type="button" class="cta"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </form>
         </div>
     </section>
 

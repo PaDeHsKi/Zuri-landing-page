@@ -21,6 +21,7 @@ a {
     min-height: 100vh;
     width: 100%;
     display: flex;
+    padding: 0 2rem;
     align-items: center;
     justify-content: center;
 }
@@ -41,8 +42,6 @@ p {
     background-color: crimson;
     border: 1px solid crimson;
     border-radius: 10%;
-    margin-left: 50px;
-    margin-bottom: 10px;
     font-size: 0.98rem;
     letter-spacing: .1rem;
     transition: .3s ease;
@@ -57,7 +56,6 @@ p {
 .brand h1 {
     font-size: 2rem;
     text-transform: uppercase;
-    margin-left: -70px;
     color: black;
 }
 
@@ -85,12 +83,15 @@ span {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 46%;
-    height: 100%;
     max-width: 1300px;
     padding: 0 10px;
 }
-
+#Header .nav-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 #Header .nav-list ul{
     list-style: none;
     position: absolute;
@@ -117,9 +118,18 @@ span {
     font-weight: 500;
     letter-spacing: .2rem;
     text-decoration: none;
-    color: crimson;
+    color: gray;
     padding: 20px;
     display: block;
+}
+#Header .active-link{
+    color: crimson;   
+}
+#Header .nav-list ul a:hover {
+   color: crimson;
+}
+#Header .nav-list ul a:active {
+   color: crimson;
 }
 
 #Header .nav-list ul a::after{
@@ -153,7 +163,6 @@ span {
     z-index: 100;
     cursor: pointer;
     transform: scale(.7);
-    margin: 20px 60px;
 }
 
 #Header .hamburger .bar{
@@ -189,25 +198,29 @@ span {
 #Header .hamburger.active .bar::after{
     top: 0;
 }
-
-#hero{
-    margin-top: 100px;
-    padding-top: 150px;
-    background-color: rgb(243, 187, 196);
-    padding: 2rem;
+#Header .header{
+    justify-content: space-between;
 }
 
+#hero{
+    background-color: rgb(243, 187, 196);
+    padding: 0 2rem;
+}
 #hero h1{
     font-size: 30px;
     margin-bottom: 10px;
     padding-bottom: 10px;
 }
-
+/* #hero .container{
+    min-height: 65vh;
+} */
+#hero .hero-links{
+    display: none;
+}
 #hero img{
     width: 100%;
     height: auto;
 }
-
 #hero .hero-links a{
     writing-mode: vertical-lr;
     text-orientation: sideways;
@@ -215,7 +228,13 @@ span {
     color: black;
     padding: 15px;
 }
-
+#curriculum .card-container{
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    flex-wrap: wrap;
+}
 .curriculum-section-content h1{
     font-size: 40px;
     text-align: center;
@@ -226,18 +245,12 @@ span {
     padding: 30px 20px;
     width: auto;
     height: auto;
-    margin: 10px;
+    margin: 2rem;
     border-radius: 2px;
     display: flex;
     max-width: 600px;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
-}
-
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 3rem;
+    flex: 1 1 calc(25% - 2rem);
 }
 
 .card .image{
@@ -283,6 +296,9 @@ span {
     background-color: rgb(243, 187, 196);
     padding-top: 20px;
     margin-top: 50px;
+}
+#enroll-forms .form-container{
+    text-align: center;
 }
 
 .enroll-forms-content h1{
@@ -349,10 +365,7 @@ select{
     size: 100%;
 }
 
-
-
-
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 991px){
     #Header .hamburger {
         display: none;
     }
@@ -363,6 +376,15 @@ select{
         height: auto;
         width: fit-content;
         background-color: transparent;
+    }
+    #Header .nav-list{
+        justify-content: space-between;
+        width: 70%;
+        flex-direction: row;
+    }
+
+    #Header .nav-list ul{
+        width: auto;
     }
     
     #Header .nav-list ul li {
@@ -376,5 +398,76 @@ select{
     #Header .nav-list ul a:after {
         display: none;
     }
-    
+    .cta{
+        padding: 1rem 4rem;
+        margin-right: 4rem;
+        text-align: center;
+        font-size: 1.5rem;
+        border-radius: 1.6rem;
+    }
+    #hero .hero-links{
+        display: unset;
+    }
+    #enroll-forms{
+        padding-bottom: 2rem;
+    }
+    #enroll-forms .form-container{
+        display: flex;
+        width: 100%;
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+    #enroll-forms .form{
+        width: 50%;
+    }
+    #enroll-forms .form a{
+        padding: 2rem;
+    width: 9rem;
+    font-size: 3rem;
+    float: right;
+    margin-right: 7rem;
+    }
+    #enroll-forms input, 
+    #enroll-forms select{
+        width: 80%;
+        padding: 2rem;
+        color: gray;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    #footer{
+        padding: 3rem;
+        margin-top: 5rem;
+    }
+    #footer .footer-logo{
+        padding: 0;
+    }
+    #footer .footer-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    #footer .footer-Q-links,
+    #footer .footer-C-links,
+    #footer .footer-socials {
+        padding: 0;
+        font-size: 2rem;
+        text-align: start;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    #footer .footer-socials{
+        flex-direction: row;
+    }
+    #footer .footer-Q-links a, 
+    #footer .footer-C-links a  {
+        display: inline-block;
+        color: gray;
+        margin-bottom: 2rem;
+    }
+    #footer .footer-Q-links h4,
+    #footer .footer-C-links h4 {
+        margin-bottom: 2rem;
+    }
 }
