@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    background-color: crimson;
+    border: 1px solid crimson;
+    border-radius: 10%;
+    font-size: 0.98rem;
+    letter-spacing: .1rem;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+.cta:hover {
+    color: white;
+    background-color: crimson;
+}
+
+.brand h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+span {
+    color: crimson;
+}
+
+
+#Header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    margin: 0;
+    height: auto;
+    background-color: rgb(243, 187, 196);
+}
+
+#Header .header {
+    min-height: 8vh;
+}
+
+#Header .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+#Header .nav-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#Header .nav-list ul{
+    list-style: none;
+    position: absolute;
+    background-color: pink;
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5s ease left;
+}
+
+#Header .nav-list ul.active{
+    left: 0;
+}
+
+#Header .nav-list ul a{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: gray;
+    padding: 20px;
+    display: block;
+}
+#Header .active-link{
+    color: crimson;   
+}
+#Header .nav-list ul a:hover {
+   color: crimson;
+}
+#Header .nav-list ul a:active {
+   color: crimson;
+}
+
+#Header .nav-list ul a::after{
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: crimson;
+    font-size: 10rem;
+    letter-spacing: 50px;
+    z-index: -1;
+    transition: .3s ease letter-spacing;
+}
+
+#Header .nav-list ul li:hover a::after{
+    transform: translate(-50%, -50%) scale(1);
+    letter-spacing: initial;
+}
+
+#Header .hamburger{
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid crimson;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.7);
+}
+
+#Header .hamburger .bar{
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: crimson;
+    z-index: -1;
+}
+
+#Header .hamburger .bar::after,
+#Header .hamburger .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: crimson;
+    transition: .3s ease;
+    transition-property: top, bottom;
+}
+
+#Header .hamburger .bar::before{
+    bottom: 8px;
+}
+#Header .hamburger .bar::after{
+    top: 8px;
+}
+
+#Header .hamburger.active .bar::before{
+    bottom: 0;
+}
+#Header .hamburger.active .bar::after{
+    top: 0;
+}
+#Header .header{
+    justify-content: space-between;
+}
+
+#hero{
+    background-color: rgb(243, 187, 196);
+    padding: 0 2rem;
+}
+#hero h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+/* #hero .container{
+    min-height: 65vh;
+} */
+#hero .hero-links{
+    display: none;
+}
+#hero img{
+    width: 100%;
+    height: auto;
+}
+#hero .hero-links a{
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+}
+#curriculum .card-container{
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.curriculum-section-content h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 30px;
+}
+.card{
+    background: #fff;
+    padding: 30px 20px;
+    width: auto;
+    height: auto;
+    margin: 2rem;
+    border-radius: 2px;
+    display: flex;
+    max-width: 600px;
+    box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
+    flex: 1 1 calc(25% - 2rem);
+}
+
+.card .image{
+    width: 10px;
+    height: auto;
+}
+
+.card h4{
+    font-size: 20px;
+    padding: 40px 30px 15px 150px;
+    text-align: left;
+}
+
+#hero ol{
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 0;
+}
+
+
+#hero ol li{
+    counter-increment: my-awesome-counter;
+    display: flex;
+    width: 50%;
+    font-size: 1.25rem;
+    margin: 0.5rem;
+}
+
+#hero ol li::before{
+    content: "0" counter(my-awesome-counter);
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: 'Abril Fatface', serif;
+    line-height: 1;
+    text-decoration: underline;
+    text-decoration-color: crimson;
+}
+
+#enroll-forms{
+    background-color: rgb(243, 187, 196);
+    padding-top: 20px;
+    margin-top: 50px;
+}
+#enroll-forms .form-container{
+    text-align: center;
+}
+
+.enroll-forms-content h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 30px 30px 0px;
+}
+
+.enroll-forms-content p{
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+input{
+    width: 400px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    margin:  10px;
+}
+
+select{
+    width: 400px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+
+.footer-logo{
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.footer-Q-links{
+    text-align: center;
+    padding: 15px;
+}
+.footer-Q-links h4{
+    margin-bottom: 5px;
+}
+.footer-Q-links a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-C-links{
+    text-align: center;
+    padding: 15px;
+}
+.footer-C-links h4{
+    margin-bottom: 5px;
+}
+.footer-C-links a{
+    text-decoration: none;
+    color: black;
+}
+.footer-socials{
+    text-align: center;
+    padding: 15px;
+    size: 100%;
+}
+
+@media only screen and (min-width: 991px){
+    #Header .hamburger {
+        display: none;
+    }
+    
+    #Header .nav-list ul {
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #Header .nav-list{
+        justify-content: space-between;
+        width: 70%;
+        flex-direction: row;
+    }
+
+    #Header .nav-list ul{
+        width: auto;
+    }
+    
+    #Header .nav-list ul li {
+        display: inline-block;
+    }
+    
+    #Header .nav-list ul li a {
+        font-size: 1.8rem;
+    }
+    
+    #Header .nav-list ul a:after {
+        display: none;
+    }
+    .cta{
+        padding: 1rem 4rem;
+        margin-right: 4rem;
+        text-align: center;
+        font-size: 1.5rem;
+        border-radius: 1.6rem;
+    }
+    #hero .hero-links{
+        display: unset;
+    }
+    #enroll-forms{
+        padding-bottom: 2rem;
+    }
+    #enroll-forms .form-container{
+        display: flex;
+        width: 100%;
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+    #enroll-forms .form{
+        width: 50%;
+    }
+    #enroll-forms .form a{
+        padding: 2rem;
+    width: 9rem;
+    font-size: 3rem;
+    float: right;
+    margin-right: 7rem;
+    }
+    #enroll-forms input, 
+    #enroll-forms select{
+        width: 80%;
+        padding: 2rem;
+        color: gray;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    #footer{
+        padding: 3rem;
+        margin-top: 5rem;
+    }
+    #footer .footer-logo{
+        padding: 0;
+    }
+    #footer .footer-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    #footer .footer-Q-links,
+    #footer .footer-C-links,
+    #footer .footer-socials {
+        padding: 0;
+        font-size: 2rem;
+        text-align: start;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    #footer .footer-socials{
+        flex-direction: row;
+    }
+    #footer .footer-Q-links a, 
+    #footer .footer-C-links a  {
+        display: inline-block;
+        color: gray;
+        margin-bottom: 2rem;
+    }
+    #footer .footer-Q-links h4,
+    #footer .footer-C-links h4 {
+        margin-bottom: 2rem;
+    }
+}
