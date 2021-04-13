@@ -448,8 +448,6 @@ select {
 }
 
 
-
-
 @media only screen and (min-width: 991px) {
     #Header .hamburger {
         display: none;
@@ -468,7 +466,6 @@ select {
         width: auto;
         background-color: transparent;
     }
-
 
     #Header .nav-list ul li {
         display: inline-block;
